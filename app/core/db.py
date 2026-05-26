@@ -71,3 +71,4 @@ def create_tenant_schema(tenant_id: str) -> None:
         if not DATABASE_URL.startswith("sqlite"):
             db.execute(text(f"CREATE SCHEMA IF NOT EXISTS tenant_{tenant_id}"))
             db.commit()
+
